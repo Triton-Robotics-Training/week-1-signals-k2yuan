@@ -1,14 +1,22 @@
-//STARTER 
-//THIS EXERCISE IS TO BE DONE IN THE ARM MBED SIMULATOR
-//http://195.130.59.221/
-//IF YOU HAVE ISSUES WITH THE SIMULATOR, CONTACT EMBEDDED LEAD
 #include "mbed.h"
 
-int main() {
-    while (1) {
-        printf("Week 1 Exercise 2");
+AnalogIn pot(p15); 
+DigitalOut led(LED1); 
 
-        // MAKE SURE THERE IS ALWAYS A WAIT ON THE SIM OR IT WILL CRASH
-        wait_ms(500); 
+double period = 2.0;    //Total period of 2s
+
+int main() {
+
+    while (true) {
+        double x = pot.read(); //Read from 0-1
+        
+        double on = period * x;    //LED on for % of period
+        double off = period - on;   // LED off for the remainder of period
+
+        led = 1;    //LED on for milliseconds duration
+        wait_ms(on * 1000);
+
+        led = 0;    //LED OFF
+        wait_ms(off * 1000);
     }
 }
