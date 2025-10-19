@@ -1,6 +1,11 @@
 Question 1: Explain the difference between analog and digital signals.
 
+Analog signals vary continuously over a range of voltages from 0 to 3.3V, whereas digital signal can only be interpreted as 1 or 0.
+
 Question 2: Give an example of something that uses digital signals and how it uses it.
+
+An example of digital siganl is a light switch. The light switch controls a light bulb so that it can either be on or off, with no gradual change in between.
 
 Question 3: Give an example of something that uses analog signals and how it uses it.
 
+An example of analog signal is a dimmer switch. The dimmer switch changes the brightness of a light bulb gradually.
